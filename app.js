@@ -21,3 +21,7 @@ document.querySelector('.hero-copy .button').insertAdjacentHTML('afterend','<p c
 document.querySelector('.gradient-cta > p').remove();
 document.querySelector('.gradient-cta strong').insertAdjacentHTML('afterend','<div class="countdown" aria-label="Նախավաճառքի ավարտի հետհաշվարկ"><span>ՆԱԽԱՎԱՃԱՌՔԻ ԱՎԱՐՏԻՆ</span><div><b data-count="days">00</b><i>օր</i><b data-count="hours">00</b><i>ժ</i><b data-count="minutes">00</b><i>ր</i></div></div>');
 const deadline=()=>{const now=new Date(),year=now.getFullYear();let date=new Date(year,8,1,23,59,59);if(now>date)date=new Date(year+1,8,1,23,59,59);return date};const updateCountdown=()=>{let seconds=Math.max(0,Math.floor((deadline()-new Date())/1000));const parts={days:Math.floor(seconds/86400),hours:Math.floor(seconds%86400/3600),minutes:Math.floor(seconds%3600/60)};Object.entries(parts).forEach(([unit,value])=>document.querySelector(`[data-count="${unit}"]`).textContent=String(value).padStart(2,'0'))};updateCountdown();setInterval(updateCountdown,60000);
+
+document.querySelector('.hero-system').remove();
+document.querySelector('.outcomes .section-head h2').innerHTML='Սկսիր քո<br><em>ֆրիլանս կարիերան</em>';
+document.querySelector('#program .section-head h2').innerHTML='6 մոդուլ՝ մեկ ամբողջական<br><em>freelance համակարգ</em>';
