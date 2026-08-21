@@ -6,3 +6,6 @@ header{border-radius:999px!important;padding-inline:28px!important;background:#0
 
 /* Keep the character clear of the hero copy on wide screens */
 @media(min-width:781px){.hero-image{inset:0 0 0 auto;width:64%!important;object-position:center!important;filter:saturate(.92) contrast(1.04) brightness(.9)!important}.hero-art:after{background:linear-gradient(90deg,#061138 0%,#061138 36%,#061138b8 48%,#06113830 67%,#06113818 100%),linear-gradient(0deg,#050d2b80 0%,transparent 46%)!important}}
+
+/* Mobile stability: prevent horizontal movement and stack all content safely */
+html,body{max-width:100%;overflow-x:clip}@media(max-width:780px){.section,.hero{width:100%;max-width:100%;overflow:hidden}.section-head,.section-head.wide,.audience-copy,.faq-list{min-width:0}.format-grid,.bonus-grid,.proof,.stats{grid-template-columns:1fr!important}.format-grid article,.bonus-grid article{min-width:0}.module-list summary{grid-template-columns:78px minmax(0,1fr) 20px;gap:12px}.module-list summary h3,.format-grid h3,.bonus-grid h3,.faq summary{overflow-wrap:anywhere}.hero h1{font-size:clamp(53px,16vw,64px);letter-spacing:-.06em}.hero h1 em{display:block}.quickbar{max-width:100%;overscroll-behavior-x:none}.enrollment h2{font-size:clamp(43px,13vw,57px)}.countdown>div{gap:5px}.countdown i{margin-right:4px}}

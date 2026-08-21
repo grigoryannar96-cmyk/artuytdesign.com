@@ -25,3 +25,4 @@ const deadline=()=>{const now=new Date(),year=now.getFullYear();let date=new Dat
 document.querySelector('.hero-system').remove();
 document.querySelector('.outcomes .section-head h2').innerHTML='Սկսիր քո<br><em>ֆրիլանս կարիերան</em>';
 document.querySelector('#program .section-head h2').innerHTML='6 մոդուլ՝ մեկ ամբողջական<br><em>freelance համակարգ</em>';
+document.querySelectorAll('a[target="_blank"]').forEach(link=>link.rel='noopener noreferrer');
