@@ -11,3 +11,8 @@ const heroImage=document.createElement('img');heroImage.className='hero-image';h
 const bonusIcons=['⌘','◎','✦','↗'];document.querySelectorAll('#bonusGrid article').forEach((card,index)=>{const number=card.querySelector('b');if(number){number.innerHTML=`<i class="bonus-icon" aria-hidden="true">${bonusIcons[index]}</i><span>${number.textContent}</span>`}});
 
 const enrollmentInfo=['Ձայնագրված դասեր / online','Գործնական առաջադրանքներ','14+ գործնական դաս','Առաջադրանքների ստուգում','Փակ Telegram Chat','Նյութերի հասանելիություն','4 բոնուս'];document.querySelector('#enroll > div:first-child').insertAdjacentHTML('beforeend',`<ul class="enrollment-list">${enrollmentInfo.map(item=>`<li><span>✦</span>${item}</li>`).join('')}</ul>`);
+
+document.querySelector('.bonuses .section-head h2').textContent='ԲՈՆՈՒՍՆԵՐ';
+const professionGroups=[['Դիզայն և ստեղծարարություն',professions.slice(0,4).concat(professions.slice(6,7),professions.slice(15,18))],['Թվային և տեխնոլոգիական մասնագիտություններ',professions.slice(4,6).concat(professions.slice(7,10))],['Բիզնես և հեռավար ծառայություններ',professions.slice(10,15)]];document.querySelector('#professionGrid').innerHTML=professionGroups.map(([title,items])=>`<article class="profession-group"><h3>${title}</h3><div>${items.map(item=>`<p><i>${icon(item[0])}</i><span>${item[1]}</span></p>`).join('')}</div></article>`).join('');
+const formatIconTypes=['video','data','write','assist','support','photo'];document.querySelector('#formatGrid').innerHTML=formats.map((item,index)=>`<article><i>${icon(formatIconTypes[index])}</i><h3>${item[1]}</h3><p>${item[2]}</p></article>`).join('');
+const refinements=document.createElement('link');refinements.rel='stylesheet';refinements.href='refinements.css';document.head.append(refinements);
