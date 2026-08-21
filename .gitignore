@@ -1,0 +1,8 @@
+# Synced project references and local Codex metadata
+sources/
+.codex/
+.agents/
+
+# OS files
+Thumbs.db
+.DS_Store
