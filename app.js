@@ -30,7 +30,7 @@ document.querySelector('.hero-copy .eyebrow').remove();
 document.querySelector('footer').insertAdjacentHTML('beforeend','<div class="footer-contact"><a href="tel:+3749988433">+374 99 884 33</a><a href="mailto:artuytdesign@gmail.com">artuytdesign@gmail.com</a><a href="https://www.instagram.com/artuytdesignagency/" target="_blank" rel="noopener noreferrer">@artuytdesignagency ↗</a><a href="https://www.instagram.com/artuytdesign/" target="_blank" rel="noopener noreferrer">@artuytdesign ↗</a></div>');
 
 /* Registration always opens the course bot. */
-const telegramBotUrl='https://t.me/upwork_freelancer_course_bot';
+const telegramBotUrl='https://t.me/upwork_freelancer_arm_bot';
 document.querySelectorAll('.button').forEach(button=>{
   if(/գրանց/i.test(button.textContent)){
     button.href=telegramBotUrl;
