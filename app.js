@@ -42,3 +42,4 @@ const telegramCta=document.querySelector('.gradient-cta .button');
 telegramCta.href=telegramBotUrl;
 telegramCta.target='_blank';
 telegramCta.rel='noopener noreferrer';
+telegramCta.innerHTML='Գրանցվել դասընթացին <b>↗</b>';
