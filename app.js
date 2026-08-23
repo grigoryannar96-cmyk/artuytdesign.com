@@ -48,3 +48,14 @@ const arrowSvg='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13
 document.querySelectorAll('.button b').forEach(arrow=>arrow.innerHTML=arrowSvg);
 document.querySelector('#formatGrid article:nth-child(5) i').innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 18.5 3 21V6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3H5z"/><path d="M8 10h8M8 14h5"/></svg>';
 document.querySelector('#bonusGrid article:nth-child(4) .bonus-icon').innerHTML=arrowSvg;
+
+const blogPosts=[
+  ['Freelance-ի իրական կողմը','$5-ից մինչև իրական Client-ների հետ աշխատանք։','https://www.instagram.com/p/DcWQ_9WjKxO/?hl=en&img_index=1'],
+  ['Դիզայն, AI և freelance','Օգտակար դիտարկումներ՝ դիզայնով աշխատանք սկսելու համար։','https://www.instagram.com/p/DcBsyuVhtQj/?hl=en'],
+  ['Upwork-ի 7 սխալները','Սխալներ, որոնց պատճառով լավ մասնագետները մնում են աննկատ։','https://www.instagram.com/p/DanhIKkjL9a/?hl=en&img_index=1'],
+  ['Առաջին Client-ի checklist','Profile, Portfolio, ճիշտ Job, Proposal և հաղորդակցություն։','https://www.instagram.com/p/DbYczw6jAot/?hl=en&img_index=1'],
+  ['Upwork-ի գործնական խորհուրդներ','Կարճ, կիրառելի խորհուրդներ freelance մասնագետների համար։','https://www.instagram.com/p/DKciAV1M19o/?hl=en'],
+  ['Freelance համակարգ','Ինչ է պետք հասկանալ՝ account ունենալուց մինչև իրական աշխատանք։','https://www.instagram.com/p/Dba-E9FRS8V/?hl=en'],
+  ['Freelance հարթակներ','Հարթակների ցանկը և freelance ճանապարհի առաջին քայլերը։','https://www.instagram.com/p/DSXvhjVDNan/?hl=en&img_index=1']
+];
+document.querySelector('footer').insertAdjacentHTML('beforebegin',`<section class="section blog" id="blog"><div class="section-head"><p class="eyebrow">08 · BLOG</p><h2>Նյութեր՝<br><em>freelance-ի մասին</em></h2></div><div class="blog-grid">${blogPosts.map(([title,description,url],index)=>`<a class="blog-post" href="${url}" target="_blank" rel="noopener noreferrer"><span>POST ${String(index+1).padStart(2,'0')}</span><h3>${title}</h3><p>${description}</p><i>${arrowSvg}</i></a>`).join('')}</div></section>`);
