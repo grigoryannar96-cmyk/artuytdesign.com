@@ -19,3 +19,7 @@ html,body{max-width:100%;overflow-x:clip}@media(max-width:780px){.section,.hero{
 
 /* Mobile hero: the visual and copy share the same left alignment as the brand mark. */
 @media(max-width:780px){.hero{min-height:700px}.hero-image{top:365px!important;left:16px!important;right:auto!important;width:calc(100% - 16px)!important;height:294px!important;object-position:60% 50%!important;border-radius:34px 0 0 34px!important}.hero-art:after{background:linear-gradient(180deg,#061138ec 0%,#061138a7 43%,#0611381e 76%,#050d2b82 100%)!important}}
+
+/* Compact, safe mobile first screen and consistent line icons. */
+.button b{display:inline-grid;place-items:center;width:18px;height:18px}.button b svg,.bonus-icon svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.format-grid i svg{fill:none;stroke:#e8f2ff;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+@media(max-width:780px){.hero{min-height:660px!important;padding-top:54px!important}.hero h1{font-size:clamp(43px,12.8vw,51px)!important;letter-spacing:-.052em!important;padding-right:12px}.hero h1 em{white-space:normal!important}.hero-image{top:345px!important;height:278px!important}footer{flex-direction:column;align-items:flex-start!important;gap:8px}footer>span{margin:0}.footer-contact{margin-top:12px!important}.bonus-icon{font-size:0}}

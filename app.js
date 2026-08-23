@@ -43,3 +43,8 @@ telegramCta.href=telegramBotUrl;
 telegramCta.target='_blank';
 telegramCta.rel='noopener noreferrer';
 telegramCta.innerHTML='Գրանցվել դասընթացին <b>↗</b>';
+
+const arrowSvg='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>';
+document.querySelectorAll('.button b').forEach(arrow=>arrow.innerHTML=arrowSvg);
+document.querySelector('#formatGrid article:nth-child(5) i').innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 18.5 3 21V6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3H5z"/><path d="M8 10h8M8 14h5"/></svg>';
+document.querySelector('#bonusGrid article:nth-child(4) .bonus-icon').innerHTML=arrowSvg;
