@@ -39,3 +39,7 @@ html,body{max-width:100%;overflow-x:clip}@media(max-width:780px){.section,.hero{
 /* On mobile the visual follows the CTA instead of overlapping the hero copy. */
 @keyframes mobileHeroEntrance{from{opacity:0;filter:saturate(.78) contrast(1.03) brightness(.8) blur(5px)}to{opacity:1;filter:saturate(.94) contrast(1.03) brightness(.92) blur(0)}}
 @media(max-width:780px){.hero{min-height:675px!important}.hero-image{top:348px!important;height:286px!important;animation:mobileHeroEntrance .85s cubic-bezier(.2,.75,.2,1) both,heroBreathe 10s ease-in-out 1s infinite!important;mask-image:linear-gradient(90deg,transparent 0%,#000 11%,#000 88%,transparent 100%),linear-gradient(180deg,transparent 0%,#000 17%,#000 85%,transparent 100%)!important;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 11%,#000 88%,transparent 100%),linear-gradient(180deg,transparent 0%,#000 17%,#000 85%,transparent 100%)!important}}
+
+/* Framed hero visual: a rounded geometric object on every screen size. */
+.hero-image{top:34px!important;right:4%!important;bottom:34px!important;left:auto!important;width:56%!important;height:calc(100% - 68px)!important;border-radius:46px 14px 46px 14px!important;mask-image:none!important;-webkit-mask-image:none!important}
+@media(max-width:780px){.hero{min-height:680px!important}.hero-image{top:348px!important;right:auto!important;bottom:auto!important;left:16px!important;width:calc(100% - 32px)!important;height:286px!important;border-radius:32px 14px 32px 14px!important}}
