@@ -65,7 +65,7 @@ const blogPosts=[
   ['Freelance համակարգ','Ինչ է պետք հասկանալ՝ account ունենալուց մինչև իրական աշխատանք։','https://www.instagram.com/p/Dba-E9FRS8V/?hl=en'],
   ['Freelance հարթակներ','Հարթակների ցանկը և freelance ճանապարհի առաջին քայլերը։','https://www.instagram.com/p/DSXvhjVDNan/?hl=en&img_index=1']
 ];
-document.querySelector('footer').insertAdjacentHTML('beforebegin',`<section class="section blog" id="blog"><div class="section-head"><p class="eyebrow">08 · BLOG</p><h2>Նյութեր՝<br><em>freelance-ի մասին</em></h2></div><div class="blog-grid">${blogPosts.map(([title,description,url],index)=>`<a class="blog-post" href="${url}" target="_blank" rel="noopener noreferrer"><img class="blog-cover" src="assets/blog-${String(index+1).padStart(2,'0')}.jpg" alt="${title}" loading="lazy"><span>POST ${String(index+1).padStart(2,'0')}</span><h3>${title}</h3><p>${description}</p><i>${arrowSvg}</i></a>`).join('')}</div></section>`);
+document.querySelector('footer').insertAdjacentHTML('beforebegin',`<section class="section blog" id="blog"><div class="section-head"><p class="eyebrow">08 · BLOG</p><h2>Նյութեր՝<br><em>freelance-ի մասին</em></h2></div><div class="blog-grid">${blogPosts.map(([title,description,url],index)=>`<a class="blog-post" href="${url}" target="_blank" rel="noopener noreferrer"><span>POST ${String(index+1).padStart(2,'0')}</span><h3>${title}</h3><p>${description}</p><i>${arrowSvg}</i></a>`).join('')}</div></section>`);
 const phoneLink=document.querySelector('.footer-contact a[href^="tel:"]');
 phoneLink.href='tel:+37499884333';
 phoneLink.textContent='+374 99 88 43 33';
