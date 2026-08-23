@@ -47,7 +47,14 @@ telegramCta.innerHTML='Գրանցվել դասընթացին <b>↗</b>';
 const arrowSvg='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>';
 document.querySelectorAll('.button b').forEach(arrow=>arrow.innerHTML=arrowSvg);
 document.querySelector('#formatGrid article:nth-child(5) i').innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 18.5 3 21V6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3H5z"/><path d="M8 10h8M8 14h5"/></svg>';
-document.querySelector('#bonusGrid article:nth-child(4) .bonus-icon').innerHTML=arrowSvg;
+const bonusSvg=[
+  '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 8h10M7 12h7M7 16h4"/></svg>',
+  '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg>',
+  '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6zM15 3v5h4M9 12h6M9 16h6"/></svg>',
+  arrowSvg
+];
+document.querySelectorAll('#bonusGrid .bonus-icon').forEach((icon,index)=>icon.innerHTML=bonusSvg[index]);
+document.querySelectorAll('.outcome-list>article>span').forEach(arrow=>arrow.innerHTML=arrowSvg);
 
 const blogPosts=[
   ['Freelance-ի իրական կողմը','$5-ից մինչև իրական Client-ների հետ աշխատանք։','https://www.instagram.com/p/DcWQ_9WjKxO/?hl=en&img_index=1'],
@@ -58,4 +65,4 @@ const blogPosts=[
   ['Freelance համակարգ','Ինչ է պետք հասկանալ՝ account ունենալուց մինչև իրական աշխատանք։','https://www.instagram.com/p/Dba-E9FRS8V/?hl=en'],
   ['Freelance հարթակներ','Հարթակների ցանկը և freelance ճանապարհի առաջին քայլերը։','https://www.instagram.com/p/DSXvhjVDNan/?hl=en&img_index=1']
 ];
-document.querySelector('footer').insertAdjacentHTML('beforebegin',`<section class="section blog" id="blog"><div class="section-head"><p class="eyebrow">08 · BLOG</p><h2>Նյութեր՝<br><em>freelance-ի մասին</em></h2></div><div class="blog-grid">${blogPosts.map(([title,description,url],index)=>`<a class="blog-post" href="${url}" target="_blank" rel="noopener noreferrer"><span>POST ${String(index+1).padStart(2,'0')}</span><h3>${title}</h3><p>${description}</p><i>${arrowSvg}</i></a>`).join('')}</div></section>`);
+document.querySelector('footer').insertAdjacentHTML('beforebegin',`<section class="section blog" id="blog"><div class="section-head"><p class="eyebrow">08 · BLOG</p><h2>Նյութեր՝<br><em>freelance-ի մասին</em></h2></div><div class="blog-grid">${blogPosts.map(([title,description,url],index)=>`<a class="blog-post" href="${url}" target="_blank" rel="noopener noreferrer"><img class="blog-cover" src="assets/blog-${String(index+1).padStart(2,'0')}.jpg" alt="${title}" loading="lazy"><span>POST ${String(index+1).padStart(2,'0')}</span><h3>${title}</h3><p>${description}</p><i>${arrowSvg}</i></a>`).join('')}</div></section>`);
