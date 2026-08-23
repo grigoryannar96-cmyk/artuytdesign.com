@@ -63,7 +63,10 @@ const blogPosts=[
   ['Առաջին Client-ի checklist','Profile, Portfolio, ճիշտ Job, Proposal և հաղորդակցություն։','https://www.instagram.com/p/DbYczw6jAot/?hl=en&img_index=1'],
   ['Upwork-ի գործնական խորհուրդներ','Կարճ, կիրառելի խորհուրդներ freelance մասնագետների համար։','https://www.instagram.com/p/DKciAV1M19o/?hl=en'],
   ['Freelance համակարգ','Ինչ է պետք հասկանալ՝ account ունենալուց մինչև իրական աշխատանք։','https://www.instagram.com/p/Dba-E9FRS8V/?hl=en'],
-  ['Freelance հարթակներ','Հարթակների ցանկը և freelance ճանապարհի առաջին քայլերը։','https://www.instagram.com/p/DSXvhjVDNan/?hl=en&img_index=1']
+  ['Freelance հարթակներ','Հարթակների ցանկը և freelance ճանապարհի առաջին քայլերը։','https://www.instagram.com/p/DSXvhjVDNan/?hl=en&img_index=1'],
+  ['Freelance-ի նոր նյութ','Գործնական դիտարկումներ freelance աշխատանքի և մասնագիտական աճի մասին։','https://www.instagram.com/p/DPjE-JHDAQ2/?hl=en'],
+  ['Կիրառելի խորհուրդներ','Նոր նյութ՝ ավելի վստահ freelance ճանապարհ կառուցելու համար։','https://www.instagram.com/p/DQmAivqjMQv/?hl=en'],
+  ['Մասնագիտական զարգացում','Նոր դիտարկումներ՝ քո հմտությունները օնլայն ներկայացնելու մասին։','https://www.instagram.com/p/DNf8OfFMVXH/?hl=en']
 ];
 document.querySelector('footer').insertAdjacentHTML('beforebegin',`<section class="section blog" id="blog"><div class="section-head"><p class="eyebrow">08 · BLOG</p><h2>Նյութեր՝<br><em>freelance-ի մասին</em></h2></div><div class="blog-grid">${blogPosts.map(([title,description,url],index)=>`<a class="blog-post" href="${url}" target="_blank" rel="noopener noreferrer"><span>POST ${String(index+1).padStart(2,'0')}</span><h3>${title}</h3><p>${description}</p><i>${arrowSvg}</i></a>`).join('')}</div></section>`);
 const phoneLink=document.querySelector('.footer-contact a[href^="tel:"]');
