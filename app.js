@@ -20,11 +20,14 @@ const refinements=document.createElement('link');refinements.rel='stylesheet';re
 document.querySelector('.hero-copy .button').insertAdjacentHTML('afterend','<p class="hero-system">6 մոդուլ՝ մեկ ամբողջական <em>freelance համակարգ</em></p>');
 document.querySelector('.gradient-cta > p').remove();
 document.querySelector('.gradient-cta strong').insertAdjacentHTML('afterend','<div class="countdown" aria-label="Նախավաճառքի ավարտի հետհաշվարկ"><span>ՆԱԽԱՎԱՃԱՌՔԻ ԱՎԱՐՏԻՆ</span><div><b data-count="days">00</b><i>օր</i><b data-count="hours">00</b><i>ժ</i><b data-count="minutes">00</b><i>ր</i></div></div>');
-const deadline=()=>{const now=new Date(),year=now.getFullYear();let date=new Date(year,8,1,23,59,59);if(now>date)date=new Date(year+1,8,1,23,59,59);return date};const updateCountdown=()=>{let seconds=Math.max(0,Math.floor((deadline()-new Date())/1000));const parts={days:Math.floor(seconds/86400),hours:Math.floor(seconds%86400/3600),minutes:Math.floor(seconds%3600/60)};Object.entries(parts).forEach(([unit,value])=>document.querySelector(`[data-count="${unit}"]`).textContent=String(value).padStart(2,'0'))};updateCountdown();setInterval(updateCountdown,60000);
+const deadline=()=>{const now=new Date(),year=now.getFullYear();let date=new Date(year,8,10,23,59,59);if(now>date)date=new Date(year+1,8,10,23,59,59);return date};const updateCountdown=()=>{let seconds=Math.max(0,Math.floor((deadline()-new Date())/1000));const parts={days:Math.floor(seconds/86400),hours:Math.floor(seconds%86400/3600),minutes:Math.floor(seconds%3600/60)};Object.entries(parts).forEach(([unit,value])=>document.querySelector(`[data-count="${unit}"]`).textContent=String(value).padStart(2,'0'))};updateCountdown();setInterval(updateCountdown,60000);
 
 document.querySelector('.hero-system').remove();
 document.querySelector('.outcomes .section-head h2').innerHTML='Սկսիր քո<br><em>ֆրիլանս կարիերան</em>';
 document.querySelector('#program .section-head h2').innerHTML='6 մոդուլ՝ մեկ ամբողջական<br><em>freelance համակարգ</em>';
+document.querySelector('.topline').textContent='ՆԱԽԱՎԱՃԱՌՔ · 59,000 ֏ մինչև սեպտեմբերի 10-ը · ՄԵԿՆԱՐԿ՝ ՍԵՊՏԵՄԲԵՐԻ 18';
+document.querySelector('.enrollment h2').innerHTML='<del>69,000 ֏</del><br><em>59,000 ֏</em>';
+document.querySelector('.enrollment>div>p:not(.eyebrow)').innerHTML='Մինչև սեպտեմբերի 10-ը<br>Մեկնարկ՝ սեպտեմբերի 18';
 document.querySelectorAll('a[target="_blank"]').forEach(link=>link.rel='noopener noreferrer');
 document.querySelector('.hero-copy .eyebrow').remove();
 document.querySelector('footer').insertAdjacentHTML('beforeend','<div class="footer-contact"><a href="tel:+3749988433">+374 99 884 33</a><a href="mailto:artuytdesign@gmail.com">artuytdesign@gmail.com</a><a href="https://www.instagram.com/artuytdesignagency/" target="_blank" rel="noopener noreferrer">@artuytdesignagency ↗</a><a href="https://www.instagram.com/artuytdesign/" target="_blank" rel="noopener noreferrer">@artuytdesign ↗</a></div>');
