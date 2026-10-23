@@ -27,10 +27,10 @@ document.querySelector('.outcomes .section-head h2').innerHTML='Սկսիր քո<
 document.querySelector('#program .section-head h2').innerHTML='6 մոդուլ՝ մեկ ամբողջական<br><em>freelance համակարգ</em>';
 document.querySelector('.quickbar span').textContent='5 ՇԱԲԱԹ';
 document.querySelector('.format .section-head h2').innerHTML='5 շաբաթ՝ սովորելու,<br><em>կիրառելու և կառուցելու համար։</em>';
-document.querySelector('.topline').textContent='ՏԱՐՎԱ ՎԵՐՋԻՆ ԽՈՒՄԲ · 49,000 ֏ մինչև նոյեմբերի 1-ը · ՄԵԿՆԱՐԿ՝ ՆՈՅԵՄԲԵՐԻ 15';
+document.querySelector('.topline').textContent='ՏԱՐՎԱ ՎԵՐՋԻՆ ԽՈՒՄԲ · ՄՆԱՑԵԼ Է 2 ՏԵՂ · 49,000 ֏ մինչև նոյեմբերի 1-ը · ՄԵԿՆԱՐԿ՝ ՆՈՅԵՄԲԵՐԻ 15';
 document.querySelector('.enrollment .eyebrow').textContent='ՀԱՏՈՒԿ ՆԱԽԱՎԱՃԱՌՔԻ ԳԻՆ';
 document.querySelector('.enrollment h2').innerHTML='<del>69,000 ֏</del><br><em>49,000 ֏</em>';
-document.querySelector('.enrollment>div>p:not(.eyebrow)').innerHTML='Մինչև նոյեմբերի 1-ը<br>Տարվա վերջին խումբ · Մեկնարկ՝ նոյեմբերի 15';
+document.querySelector('.enrollment>div>p:not(.eyebrow)').innerHTML='Մնացել է 2 տեղ<br>Մինչև նոյեմբերի 1-ը · Տարվա վերջին խումբ<br>Մեկնարկ՝ նոյեմբերի 15';
 document.querySelectorAll('a[target="_blank"]').forEach(link=>link.rel='noopener noreferrer');
 document.querySelector('.hero-copy .eyebrow').remove();
 document.querySelector('footer').insertAdjacentHTML('beforeend','<div class="footer-contact"><a href="tel:+3749988433">+374 99 884 33</a><a href="mailto:artuytdesign@gmail.com">artuytdesign@gmail.com</a><a href="https://www.instagram.com/artuytdesignagency/" target="_blank" rel="noopener noreferrer">@artuytdesignagency ↗</a><a href="https://www.instagram.com/artuytdesign/" target="_blank" rel="noopener noreferrer">@artuytdesign ↗</a></div>');
